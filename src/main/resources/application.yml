@@ -1,20 +1,20 @@
 
-#Spring Batch ?? ?? ??
+#Spring Batch 전역 환경 설정
 spring:
   profiles:
     active: local
-#Batch?? ???? ?? ?? ???
+#Batch명이 없을경우 기존 배치 명지정
   batch:
     job:
       names: ${job.name:studyOneJob}
 
 ---
-#Spring Batch local ?? ??
+#Spring Batch local 환경 설정
 spring:
   config:
     activate:
       on-profile: local
-#MySQL ?????? ??
+  #MySQL 데이타베이스 연결
   datasource:
     url: jdbc:log4jdbc:mysql://127.0.0.1:3306/test
     username: root
